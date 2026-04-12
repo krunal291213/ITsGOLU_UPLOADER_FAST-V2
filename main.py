@@ -135,7 +135,7 @@ async def set_log_channel_cmd(client: Client, message: Message):
     except Exception as e:
         await message.reply_text(f"❌ Error: {str(e)}")
 
-@bot.on_message(filters.command("getlog") & filters.private)
+@bot.on_message(filters.command("start") & filters.private)
 async def get_log_channel_cmd(client: Client, message: Message):
     """Get current log channel info"""
     try:
