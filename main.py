@@ -717,7 +717,7 @@ async def txt_handler(bot: Client, m: Message):
 
             name1 = links[i][0].replace("(", "[").replace(")", "]").replace("_", "").replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
             if "," in raw_text3:
-                 name = f'{PRENAME} {name1[:60]}'
+                 return name.strip()[:80]
             else:
                  name = clean_filename(name1)
                  
