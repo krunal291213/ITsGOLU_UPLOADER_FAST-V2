@@ -6,7 +6,7 @@ API_ID = int(os.environ.get("API_ID", "25134698"))
 API_HASH = os.environ.get("API_HASH", "6b66c879f765a0662a3ad030f8ae45f7")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
-
+CREDIT = os.environ.get("CREDIT", "Admin")
 # MongoDB Configuration
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "CpprivateApi")
 DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://itsgoluAPI:jrMHSipToKUEnmcp@cpprivateapi.ghhp3oz.mongodb.net/?appName=CpprivateApi")  # Add your own atlas db
