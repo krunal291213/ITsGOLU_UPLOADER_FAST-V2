@@ -719,7 +719,7 @@ async def txt_handler(bot: Client, m: Message):
             if "," in raw_text3:
                  name = f'{PRENAME} {name1[:60]}'
             else:
-                 name = f'{name1[:60]}'
+                 name = clean_filename(name1)
                  
             user_id = m.from_user.id
             
@@ -1011,7 +1011,7 @@ async def txt_handler(bot: Client, m: Message):
                         res_file = await helper.download_and_decrypt_video(url, cmd, name, appxkey)  
                         filename = res_file  
                         await prog.delete(True) 
-                        if os.exists(filename):
+                        if os.path.exists(filename):
                             await helper.send_vid(bot, m, cc, filename, thumb, name, prog, channel_id, watermark=watermark)
                             count += 1
                         else:
