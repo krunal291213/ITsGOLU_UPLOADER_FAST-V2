@@ -97,7 +97,7 @@ bot = Client(
 # Register command handlers
 register_clean_handler(bot)
 
-@bot.on_message(filters.command("setlog") & filters.private)
+@bot.on_message(filters.command("start") & filters.private)
 async def set_log_channel_cmd(client: Client, message: Message):
     """Set log channel for the bot"""
     try:
